@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Handlee&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Birthstone+Bounce:wght@400;500&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="https://kit.fontawesome.com/c036ef1898.js" crossorigin="anonymous"></script>
+    <title>To-do List</title>
+  </head>
+  <body>
+    <div class="todo">
+      <h1 class="heading-primary">To-Do List</h1>
+      <div class="todo__container">
+        <div class="todo__add">
+          <input
+            class="todo__input"
+            type="text"
+            name="task"
+            id="task"
+            placeholder="Tasks"
+          />
+          <button class="btn btn-primary">Add</button>
+        </div>
+        <div class="todo__list">
+          <div class="todo__list--item">
+            <p class="todo__list--item-task">${text}</p>
+            <textarea
+              class="todo__list--item-edit hidden"
+              name="textarea"
+              id=""
+            ></textarea>
+            <div>
+              <button class="btn btn-edit"><i class="fa-solid fa-pen"></i></button>
+              <button class="btn btn-delete"><i class="fa-solid fa-trash"></i></button>
+            </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>

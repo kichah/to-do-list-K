@@ -1,0 +1,16 @@
+{
+  "name": "todo-list",
+  "version": "1.0.0",
+  "description": "a todo list project",
+  "main": "index.js",
+  "scripts": {
+    "watch:sass": "sass sass/main.scss css/style.css -w",
+    "dev-server": "live-server",
+    "start": "npm-run-all --parallel dev-server watch:sass"
+  },
+  "author": "abdellatif kichah",
+  "license": "by tofi",
+  "devDependencies": {
+    "sass": "^1.77.5"
+  }
+}
