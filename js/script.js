@@ -6,14 +6,19 @@ const btnDelete = document.querySelectorAll('.btn-delete');
 const listContainer = document.querySelector('.todo__list');
 const data = [];
 
-btnAdd.addEventListener('click', () => {
+btnAdd.addEventListener('click', addTask);
+input.addEventListener('keypress', (e) => {
+  if (e.key === 'Enter') {
+    addTask();
+  }
+});
+function addTask() {
   if (!input.value || !input.value.trim()) return;
   data.push(input.value);
   renderTask(listContainer, input.value);
   input.value = '';
-  const c = localStorage.setItem('task', JSON.stringify(data));
-});
-
+  localStorage.setItem('task', JSON.stringify(data));
+}
 function renderTask(container, text) {
   // function to render the task taking the text inside and the container
   const markup = `<div class="todo__list--item">
@@ -63,7 +68,6 @@ listContainer.addEventListener('click', (e) => {
     data.splice(index, 1);
     // restore the data
     localStorage.setItem('task', JSON.stringify(data));
-    console.log(data);
     listItem.remove();
   }
 });
