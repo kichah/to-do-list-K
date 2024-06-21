@@ -114,16 +114,15 @@ body {
 .todo__input {
   padding: 1.5rem 3rem;
   border-radius: 5px;
-  font-size: 2.5rem;
+  font-size: 3.5rem;
   border: none;
   flex: 9;
   color: var(--color-primary-dark);
-}
-.todo__input:hover {
-  outline: none;
+  font-family: "Handlee", cursive;
+  font-weight: 400;
 }
 .todo__input:focus-visible {
-  outline: none;
+  outline: 1px inset var(--color-primary);
 }
 .todo__list {
   background-color: #eee;
